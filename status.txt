@@ -1,35 +1,36 @@
-run: 40888300226  commit: 01788cc0a92bd97d7b7e27cd69e36d90bddb21a5  status: failure
+run: 40889317072  commit: 027000fee33e6000885051c0fae60da744d482ba  status: failure
 xcode: Xcode 26.6
 --- errors
-build.log:xcodebuild: error: Could not resolve package dependencies:
+build.log:/Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallStore.swift:76:18: error: cannot find type 'ARController' in scope
+build.log:/Users/runner/work/geotag/geotag/ios/GeoTag/Paint/WallRaster.swift:157:23: error: cannot find type 'CGImage' in scope
 --- tail
+    
 
-Creating working copy of package ‘interop-ios-for-google-sdks’
+SwiftCompile normal arm64 Compiling\ WallCanvasNode.swift,\ WallRaster.swift,\ WallStore.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallCanvasNode.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Paint/WallRaster.swift /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallStore.swift /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'GeoTag' from project 'GeoTag')
 
-Checking out 101.0.0 of package ‘interop-ios-for-google-sdks’
+SwiftCompile normal arm64 /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallCanvasNode.swift (in target 'GeoTag' from project 'GeoTag')
+    cd /Users/runner/work/geotag/geotag/ios
+    
 
-Creating working copy of package ‘google-ads-on-device-conversion-ios-sdk’
+SwiftCompile normal arm64 /Users/runner/work/geotag/geotag/ios/GeoTag/Paint/WallRaster.swift (in target 'GeoTag' from project 'GeoTag')
+    cd /Users/runner/work/geotag/geotag/ios
+    
 
-Checking out 3.7.0 of package ‘google-ads-on-device-conversion-ios-sdk’
+SwiftCompile normal arm64 /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallStore.swift (in target 'GeoTag' from project 'GeoTag')
+    cd /Users/runner/work/geotag/geotag/ios
+    
 
-Creating working copy of package ‘promises’
+SwiftCompile normal arm64 /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'GeoTag' from project 'GeoTag')
+    cd /Users/runner/work/geotag/geotag/ios
+    
 
-Checking out 2.4.1 of package ‘promises’
+SwiftCompile normal arm64 Compiling\ GeoMath.swift,\ GeoTagApp.swift,\ Haptics.swift,\ Keychain.swift,\ Models.swift /Users/runner/work/geotag/geotag/ios/GeoTag/AR/GeoMath.swift /Users/runner/work/geotag/geotag/ios/GeoTag/App/GeoTagApp.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Paint/Haptics.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Backend/Keychain.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Backend/Models.swift (in target 'GeoTag' from project 'GeoTag')
 
-Creating working copy of package ‘gtm-session-fetcher’
+** BUILD FAILED **
 
-Checking out 5.3.1 of package ‘gtm-session-fetcher’
 
-Creating working copy of package ‘GoogleUtilities’
-
-Checking out 8.1.5 of package ‘GoogleUtilities’
-
-Creating working copy of package ‘GoogleDataTransport’
-
-Checking out 10.1.1 of package ‘GoogleDataTransport’
-
-checksum of downloaded artifact of binary target 'ARCoreCloudAnchors' (4a0bfcd93f5e4eea2e2a2ebf0ddacf9c3f288c09d70937c469268b00de8d538e) does not match checksum specified by the manifest (7e37f28420b7586dc3222831e1dc28546f33fdf21caadf8eff3010b337eb28c2)fatalError2026-10-29 14:09:18.721 xcodebuild[1332:7320] Writing error result bundle to /var/folders/n6/hn37q6pj7sj_9dmqqc2113800000gn/T/ResultBundle_2026-29-10_14-09-0018.xcresult
-xcodebuild: error: Could not resolve package dependencies:
-  checksum of downloaded artifact of binary target 'ARCoreCloudAnchors' (4a0bfcd93f5e4eea2e2a2ebf0ddacf9c3f288c09d70937c469268b00de8d538e) does not match checksum specified by the manifest (7e37f28420b7586dc3222831e1dc28546f33fdf21caadf8eff3010b337eb28c2)
-  fatalError
-
+The following build commands failed:
+	EmitSwiftModule normal arm64 (in target 'GeoTag' from project 'GeoTag')
+	SwiftEmitModule normal arm64 Emitting\ module\ for\ GeoTag (in target 'GeoTag' from project 'GeoTag')
+	Building project GeoTag with scheme GeoTag and configuration Debug
+(3 failures)
