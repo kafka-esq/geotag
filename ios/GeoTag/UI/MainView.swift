@@ -126,7 +126,7 @@ struct MainScreen: View {
             Spacer(minLength: 4)
             if model.practice {
                 Button("exit practice") { spray.stop(); model.leavePractice() }
-                    .font(Theme.body(13, .semibold)).pill(Theme.paint)
+                    .font(Theme.body(13, .semibold)).foregroundStyle(Theme.chalk).pill(Theme.paint)
             } else if spray.phase != .locked {
                 iconButton("map") { sheet = .map }
                 iconButton("bell") { sheet = .activity }
