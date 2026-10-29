@@ -1,0 +1,8 @@
+ios/GeoTag.xcodeproj/
+ios/.spm/
+ios/build/
+ios/*.log
+.DS_Store
+xcuserdata/
+*.p8
+service-account*.json

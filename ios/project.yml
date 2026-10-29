@@ -1,0 +1,59 @@
+name: GeoTag
+options:
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+packages:
+  ARCore:
+    url: https://github.com/google-ar/arcore-ios-sdk
+    exactVersion: 1.57.0
+settings:
+  base:
+    MARKETING_VERSION: "0.2.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: ""
+targets:
+  GeoTag:
+    type: application
+    platform: iOS
+    sources:
+      - path: GeoTag
+    info:
+      path: GeoTag/Info.plist
+      properties:
+        CFBundleDisplayName: "geo#"
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSCameraUsageDescription: "geo# uses the camera to find walls and show the art painted on them."
+        NSLocationWhenInUseUsageDescription: "geo# uses your precise location to find walls and art around you."
+        UIRequiredDeviceCapabilities: [arkit]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UIUserInterfaceStyle: Dark
+        UIStatusBarStyle: UIStatusBarStyleLightContent
+        UIAppFonts: [SedgwickAveDisplay.ttf]
+        ITSAppUsesNonExemptEncryption: false
+        LSRequiresIPhoneOS: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.kafkaesq.geotag
+        PRODUCT_NAME: GeoTag
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_BITCODE: NO
+        SWIFT_STRICT_CONCURRENCY: minimal
+    dependencies:
+      - package: ARCore
+        product: ARCoreGeospatial
+      - package: ARCore
+        product: ARCoreCloudAnchors
+      - package: ARCore
+        product: ARCoreSemantics
+      - sdk: SceneKit.framework
+      - sdk: ARKit.framework
+      - sdk: CoreHaptics.framework
