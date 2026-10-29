@@ -44,6 +44,7 @@ final class ARController: NSObject, ObservableObject, ARSCNViewDelegate, ARSessi
     private var location = CLLocationManager()
     private var lastCoordinate: CLLocationCoordinate2D?
     private var started = false
+    private var locationStarted = false
     private var tokenTimer: Timer?
     private var lastFrameTime: TimeInterval = 0
     private var lastCandidateCheck: TimeInterval = 0
@@ -94,12 +95,13 @@ final class ARController: NSObject, ObservableObject, ARSCNViewDelegate, ARSessi
         config.isAutoFocusEnabled = true
         view.session.run(config, options: started ? [] : [.resetTracking, .removeExistingAnchors])
         spray.audio.start()
-        guard !started else { return }
         started = true
         if practice {
             loc = .ready
             return
         }
+        guard !locationStarted else { return }
+        locationStarted = true
         location.delegate = self
         location.desiredAccuracy = kCLLocationAccuracyBest
         switch location.authorizationStatus {

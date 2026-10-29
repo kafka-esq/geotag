@@ -140,7 +140,7 @@ Before the public release, also run `backend/admin.sql` step 4 daily (the modera
 
 ## Known limits
 
-- **Not yet run on a phone.** It compiles on Apple's toolchain in CI, and the database was tested end to end, but nobody has painted with it yet. Expect tuning: spray width, drip threshold and lock-on distances are constants at the top of `SprayEngine.swift`.
+- **Not yet run on a phone.** It builds with Xcode 26 in CI, it launches in the iOS Simulator (put `[smoke]` in a commit message to get fresh screenshots on the `ci-status` branch), and the database was tested end to end. Nobody has painted a real wall with it yet, because the simulator has no camera AR. Expect tuning: spray width, drip threshold and lock-on distances are constants at the top of `SprayEngine.swift`.
 - **The physical volume button can't be the trigger.** App Store rule 2.5.9 forbids repurposing the volume buttons, and Apple's camera-button API only works with a regular camera session, not ARKit. The whole screen is the trigger instead.
 - **Coverage.** Geospatial needs Street View nearby; back alleys localise worse, indoors not at all (practice mode still works).
 - **Flat walls only.** Rolling doors, pillars and deep brick reveals are rejected or float.

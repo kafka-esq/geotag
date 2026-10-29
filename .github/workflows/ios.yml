@@ -109,7 +109,8 @@ jobs:
           git fetch origin ci-status:ci-status 2>/dev/null || true
           git worktree add /tmp/st ci-status 2>/dev/null || { git worktree add --orphan -b ci-status /tmp/st 2>/dev/null || (git worktree add -b ci-status /tmp/st && git -C /tmp/st rm -rf . -q); }
           cp /tmp/status.txt /tmp/st/status.txt
-          cd /tmp/st && git add status.txt && git commit -qm "build ${{ github.run_number }}: ${{ job.status }}" && git push -q origin ci-status || true
+          cd /tmp/st && git add status.txt && git commit -qm "build ${{ github.run_number }}: ${{ job.status }}" || true
+          for i in 1 2 3 4 5; do git pull -q --rebase origin ci-status && git push -q origin ci-status && break; sleep 3; done || true
 
   # Launches the app in the iOS Simulator and screenshots the first screens. Runs when a commit message has [smoke].
   smoke:
@@ -159,4 +160,5 @@ jobs:
           git worktree add /tmp/st ci-status
           mkdir -p /tmp/st/shots && cp ios/shots/* /tmp/st/shots/ 2>/dev/null || true
           grep -E "error:" ios/sim.log 2>/dev/null | sort -u | head -40 > /tmp/st/shots/build-errors.txt || true
-          cd /tmp/st && git add -A && git commit -qm "smoke ${{ github.run_number }}" && git push -q origin ci-status || true
+          cd /tmp/st && git add -A && git commit -qm "smoke ${{ github.run_number }}" || true
+          for i in 1 2 3 4 5; do git pull -q --rebase origin ci-status && git push -q origin ci-status && break; sleep 3; done || true

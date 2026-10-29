@@ -52,6 +52,7 @@ final class AppModel: ObservableObject {
 
     func leavePractice() {
         practice = false
+        for w in ar.store.all where w.isLocal { ar.store.remove(w.id) }
         Task { await boot() }
     }
 
