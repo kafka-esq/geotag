@@ -1,36 +1,34 @@
-run: 40889317072  commit: 027000fee33e6000885051c0fae60da744d482ba  status: failure
+run: 40890422779  commit: 42100381c40ffabf01b7df31caf7df75c3eb1c70  status: success
 xcode: Xcode 26.6
 --- errors
-build.log:/Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallStore.swift:76:18: error: cannot find type 'ARController' in scope
-build.log:/Users/runner/work/geotag/geotag/ios/GeoTag/Paint/WallRaster.swift:157:23: error: cannot find type 'CGImage' in scope
 --- tail
-    
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/GeoTag.debug.dylib --scan-folder /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/Frameworks --scan-folder /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/PlugIns --scan-folder /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/SystemExtensions --scan-folder /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/Extensions --scan-folder /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/System/Library/Frameworks/SceneKit.framework --scan-folder /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/System/Library/Frameworks/ARKit.framework --scan-folder /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk/System/Library/Frameworks/CoreHaptics.framework --platform iphoneos --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.4lO56a/Metal.xctoolchain --toolchain /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
 
-SwiftCompile normal arm64 Compiling\ WallCanvasNode.swift,\ WallRaster.swift,\ WallStore.swift,\ GeneratedAssetSymbols.swift /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallCanvasNode.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Paint/WallRaster.swift /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallStore.swift /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'GeoTag' from project 'GeoTag')
-
-SwiftCompile normal arm64 /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallCanvasNode.swift (in target 'GeoTag' from project 'GeoTag')
+ExtractAppIntentsMetadata (in target 'GeoTag' from project 'GeoTag')
     cd /Users/runner/work/geotag/geotag/ios
-    
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.4lO56a/Metal.xctoolchain --module-name GeoTag --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 17.0 --bundle-identifier com.kafkaesq.geotag --output /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app --target-triple arm64-apple-ios17.0 --binary-file /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/GeoTag --dependency-file /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/Objects-normal/arm64/GeoTag_dependency_info.dat --stringsdata-file /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/Objects-normal/arm64/GeoTag.SwiftFileList --metadata-file-list /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/GeoTag.DependencyMetadataFileList --static-metadata-file-list /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/GeoTag.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/Objects-normal/arm64/GeoTag.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-10-29 14:23:04.360 appintentsmetadataprocessor[5990:20810] Starting appintentsmetadataprocessor export
+2026-10-29 14:23:04.365 appintentsmetadataprocessor[5990:20810] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
 
-SwiftCompile normal arm64 /Users/runner/work/geotag/geotag/ios/GeoTag/Paint/WallRaster.swift (in target 'GeoTag' from project 'GeoTag')
+AppIntentsSSUTraining (in target 'GeoTag' from project 'GeoTag')
     cd /Users/runner/work/geotag/geotag/ios
-    
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/Info.plist --temp-dir-path /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/ssu --bundle-id com.kafkaesq.geotag --product-path /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app --extracted-metadata-path /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/Metadata.appintents --metadata-file-list /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/GeoTag.DependencyMetadataFileList --source-file /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app/Info.plist --archive-ssu-assets
+2026-10-29 14:23:04.423 appintentsnltrainingprocessor[5991:20812] Parsing options for appintentsnltrainingprocessor
+2026-10-29 14:23:04.424 appintentsnltrainingprocessor[5991:20812] Starting AppIntents SSU YAML Generation
+2026-10-29 14:23:04.429 appintentsnltrainingprocessor[5991:20812] No AppShortcuts found - Skipping.
 
-SwiftCompile normal arm64 /Users/runner/work/geotag/geotag/ios/GeoTag/AR/WallStore.swift (in target 'GeoTag' from project 'GeoTag')
+RegisterExecutionPolicyException /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app (in target 'GeoTag' from project 'GeoTag')
     cd /Users/runner/work/geotag/geotag/ios
-    
+    builtin-RegisterExecutionPolicyException /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app
 
-SwiftCompile normal arm64 /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Intermediates.noindex/GeoTag.build/Debug-iphoneos/GeoTag.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'GeoTag' from project 'GeoTag')
+Validate /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app (in target 'GeoTag' from project 'GeoTag')
     cd /Users/runner/work/geotag/geotag/ios
-    
+    builtin-validationUtility /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app -shallow-bundle -infoplist-subpath Info.plist
 
-SwiftCompile normal arm64 Compiling\ GeoMath.swift,\ GeoTagApp.swift,\ Haptics.swift,\ Keychain.swift,\ Models.swift /Users/runner/work/geotag/geotag/ios/GeoTag/AR/GeoMath.swift /Users/runner/work/geotag/geotag/ios/GeoTag/App/GeoTagApp.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Paint/Haptics.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Backend/Keychain.swift /Users/runner/work/geotag/geotag/ios/GeoTag/Backend/Models.swift (in target 'GeoTag' from project 'GeoTag')
+Touch /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app (in target 'GeoTag' from project 'GeoTag')
+    cd /Users/runner/work/geotag/geotag/ios
+    /usr/bin/touch -c /Users/runner/Library/Developer/Xcode/DerivedData/GeoTag-bhrhrccdkfvppkbiqxbptvooijsp/Build/Products/Debug-iphoneos/GeoTag.app
 
-** BUILD FAILED **
+** BUILD SUCCEEDED **
 
-
-The following build commands failed:
-	EmitSwiftModule normal arm64 (in target 'GeoTag' from project 'GeoTag')
-	SwiftEmitModule normal arm64 Emitting\ module\ for\ GeoTag (in target 'GeoTag' from project 'GeoTag')
-	Building project GeoTag with scheme GeoTag and configuration Debug
-(3 failures)
