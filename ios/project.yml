@@ -47,6 +47,9 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         ENABLE_BITCODE: NO
         SWIFT_STRICT_CONCURRENCY: minimal
+        OTHER_LDFLAGS: "$(inherited) -ObjC"
+        CLANG_ENABLE_MODULES: YES
+        CLANG_MODULES_AUTOLINK: YES
     dependencies:
       - package: ARCore
         product: ARCoreGeospatial

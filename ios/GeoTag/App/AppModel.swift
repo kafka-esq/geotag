@@ -18,6 +18,7 @@ final class AppModel: ObservableObject {
         #if DEBUG
         // CI screenshots: launch with -geoScreen onboarding|offline
         if let s = UserDefaults.standard.string(forKey: "geoScreen") {
+            if s == "practice" { startPractice(); return }
             phase = s == "onboarding" ? .onboarding : .offline("geo# isn't connected to a server yet. you can still try practice mode.")
             return
         }

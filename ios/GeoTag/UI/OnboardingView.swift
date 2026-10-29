@@ -47,7 +47,7 @@ struct OnboardingView: View {
             bullet("find", "the map shows every painted wall near you.")
             Text("geo# runs on Google Play Services for AR (ARCore), provided by Google LLC and governed by the Google Privacy Policy.")
                 .font(Theme.body(13)).foregroundStyle(Theme.mute)
-            Link("read google's privacy policy", destination: URL(string: "https://policies.google.com/privacy")!)
+            Link("how google uses data when you use partner apps", destination: URL(string: "https://www.google.com/policies/privacy/partners/")!)
                 .font(Theme.body(13, .semibold))
             Button { privacyAck = true; step = 1 } label: {
                 Text("continue").frame(maxWidth: .infinity)

@@ -82,6 +82,7 @@ struct ProfileView: View {
                     Link("support", destination: URL(string: Secrets.supportEmail.isEmpty ? Secrets.siteURL + "/support.html" : "mailto:\(Secrets.supportEmail)")!)
                     Text("geo# runs on Google Play Services for AR (ARCore), provided by Google LLC and governed by the Google Privacy Policy.")
                         .font(Theme.body(12)).foregroundStyle(Theme.mute)
+                    Link("how google uses data when you use partner apps", destination: URL(string: "https://www.google.com/policies/privacy/partners/")!)
                 }
 
                 Section {

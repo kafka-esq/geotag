@@ -149,6 +149,7 @@ jobs:
           name=2-intro shoot -geoScreen onboarding -geoStep 0
           name=3-rules shoot -geoScreen onboarding -geoStep 1
           name=4-gate shoot -geoScreen onboarding -geoStep 2
+          name=5-practice shoot -geoScreen practice
           xcrun simctl spawn "$UDID" log show --last 2m --predicate 'process == "GeoTag"' --style compact 2>/dev/null | grep -iE "fault|crash|fatal|error" | head -40 > shots/log.txt || true
       - name: Publish screenshots
         if: always()
