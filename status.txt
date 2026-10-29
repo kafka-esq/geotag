@@ -1,0 +1,35 @@
+run: 40888300226  commit: 01788cc0a92bd97d7b7e27cd69e36d90bddb21a5  status: failure
+xcode: Xcode 26.6
+--- errors
+build.log:xcodebuild: error: Could not resolve package dependencies:
+--- tail
+
+Creating working copy of package ‘interop-ios-for-google-sdks’
+
+Checking out 101.0.0 of package ‘interop-ios-for-google-sdks’
+
+Creating working copy of package ‘google-ads-on-device-conversion-ios-sdk’
+
+Checking out 3.7.0 of package ‘google-ads-on-device-conversion-ios-sdk’
+
+Creating working copy of package ‘promises’
+
+Checking out 2.4.1 of package ‘promises’
+
+Creating working copy of package ‘gtm-session-fetcher’
+
+Checking out 5.3.1 of package ‘gtm-session-fetcher’
+
+Creating working copy of package ‘GoogleUtilities’
+
+Checking out 8.1.5 of package ‘GoogleUtilities’
+
+Creating working copy of package ‘GoogleDataTransport’
+
+Checking out 10.1.1 of package ‘GoogleDataTransport’
+
+checksum of downloaded artifact of binary target 'ARCoreCloudAnchors' (4a0bfcd93f5e4eea2e2a2ebf0ddacf9c3f288c09d70937c469268b00de8d538e) does not match checksum specified by the manifest (7e37f28420b7586dc3222831e1dc28546f33fdf21caadf8eff3010b337eb28c2)fatalError2026-10-29 14:09:18.721 xcodebuild[1332:7320] Writing error result bundle to /var/folders/n6/hn37q6pj7sj_9dmqqc2113800000gn/T/ResultBundle_2026-29-10_14-09-0018.xcresult
+xcodebuild: error: Could not resolve package dependencies:
+  checksum of downloaded artifact of binary target 'ARCoreCloudAnchors' (4a0bfcd93f5e4eea2e2a2ebf0ddacf9c3f288c09d70937c469268b00de8d538e) does not match checksum specified by the manifest (7e37f28420b7586dc3222831e1dc28546f33fdf21caadf8eff3010b337eb28c2)
+  fatalError
+
