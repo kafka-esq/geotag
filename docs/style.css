@@ -1,0 +1,16 @@
+@font-face { font-family: "Sedgwick"; src: url("SedgwickAveDisplay.ttf") format("truetype"); font-display: swap; }
+:root { --ink:#0e0c10; --chalk:#f3efe6; --paint:#ff3d7f; --cap:#ffd23f; --mute:#a49ea9; --line:rgba(243,239,230,.16); color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ink); color: var(--chalk); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  padding: 0 max(18px, env(safe-area-inset-right)) 0 max(18px, env(safe-area-inset-left)); }
+main { max-width: 680px; margin: 0 auto; padding: 48px 0 80px; }
+.logo { font-family: "Sedgwick", "Marker Felt", cursive; font-size: clamp(72px, 18vw, 120px); line-height: .9; margin: 0 0 8px;
+  color: var(--chalk); text-shadow: 5px 5px 0 var(--paint), 9px 9px 0 #000; transform: rotate(-5deg); display: inline-block; text-decoration: none; }
+h1 { font-size: 30px; line-height: 1.2; margin: 28px 0 12px; text-wrap: balance; }
+h2 { font-size: 20px; margin: 36px 0 8px; color: var(--paint); }
+p, li { color: #e4dfd4; }
+a { color: var(--paint); }
+.mute { color: var(--mute); font-size: 15px; }
+.card { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; background: #151218; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--line); margin-top: 48px; padding-top: 18px; font-size: 15px; }
+code { font: 600 15px ui-monospace, Menlo, monospace; color: var(--cap); }

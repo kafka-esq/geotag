@@ -15,6 +15,13 @@ final class AppModel: ObservableObject {
     private var toastTask: Task<Void, Never>?
 
     func boot() async {
+        #if DEBUG
+        // CI screenshots: launch with -geoScreen onboarding|offline
+        if let s = UserDefaults.standard.string(forKey: "geoScreen") {
+            phase = s == "onboarding" ? .onboarding : .offline("geo# isn't connected to a server yet. you can still try practice mode.")
+            return
+        }
+        #endif
         guard api.isConfigured else {
             phase = .offline("geo# isn't connected to a server yet. you can still try practice mode.")
             return

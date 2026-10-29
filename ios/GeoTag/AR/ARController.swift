@@ -290,7 +290,7 @@ final class ARController: NSObject, ObservableObject, ARSCNViewDelegate, ARSessi
         let planes = frame.anchors.compactMap { $0 as? ARPlaneAnchor }.filter { $0.alignment == .vertical }
 
         for w in store.all {
-            if w.isLocal, let lf = w.localFrame { w.target = lf; w.trust = .matched }
+            if let lf = w.localFrame { w.target = lf; w.trust = .matched }
             else if let c = w.cloudAnchorId, let t = poses[c] { w.target = t; w.trust = .locked }
             else if let gId = w.geoAnchorId, let base = poses[gId] {
                 if frame.timestamp - w.lastSnap > 0.4 {

@@ -108,7 +108,7 @@ struct MainScreen: View {
         } else if mode == .look {
             Color.clear.contentShape(Rectangle()).ignoresSafeArea()
                 .gesture(SpatialTapGesture().onEnded { e in
-                    guard let (w, p) = ar.pick(e.location), let piece = w.piece(at: p) else { return }
+                    guard let hit = ar.pick(e.location), let piece = hit.0.piece(at: hit.1) else { return }
                     sheet = .piece(piece)
                 })
         }

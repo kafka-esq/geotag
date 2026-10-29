@@ -29,7 +29,13 @@ struct OnboardingView: View {
                 .padding(.bottom, 40)
             }
         }
-        .onAppear { if privacyAck { step = 1 } }
+        .onAppear {
+            if privacyAck { step = 1 }
+            #if DEBUG
+            let forced = UserDefaults.standard.integer(forKey: "geoStep")
+            if forced > 0 { step = forced; agreed = forced > 1 }
+            #endif
+        }
     }
 
     private var intro: some View {

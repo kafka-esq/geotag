@@ -13,6 +13,8 @@ struct SketchView: View {
     @State private var size: CGFloat = 0.02   // fraction of the frame width
     @State private var posting = false
 
+    static let sizes: [(String, CGFloat)] = [("S", 0.008), ("M", 0.02), ("L", 0.045), ("XL", 0.08)]
+
     struct Line: Identifiable {
         let id = UUID()
         var color: String
@@ -35,7 +37,7 @@ struct SketchView: View {
                 toggle("marker", brush == "m") { brush = "m" }
                 toggle("spray", brush == "s") { brush = "s" }
                 Spacer(minLength: 4)
-                ForEach([("S", 0.008), ("M", 0.02), ("L", 0.045), ("XL", 0.08)], id: \.0) { item in
+                ForEach(Self.sizes, id: \.0) { item in
                     toggle(item.0, abs(size - item.1) < 0.001) { size = item.1 }
                 }
             }
