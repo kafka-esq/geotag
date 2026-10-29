@@ -7,7 +7,7 @@ options:
 packages:
   ARCore:
     url: https://github.com/google-ar/arcore-ios-sdk
-    exactVersion: 1.57.0
+    revision: a8d83517866cdca0f9dfd2e812dc0be06f00b6b9   # "ARCore iOS SDK 1.57.1"
 settings:
   base:
     MARKETING_VERSION: "0.2.0"
